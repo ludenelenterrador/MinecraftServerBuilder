@@ -1,5 +1,7 @@
 # MinecraftServerBuilder
 
+If you like minecraft and you dont know how create a server it is your app :)
+
 ![image](https://github.com/ludenelenterrador/MinecraftServerBuilder/assets/134003146/498c987a-faf4-4e0f-a92a-97d5847b2908)
 
 ![image](https://github.com/ludenelenterrador/MinecraftServerBuilder/assets/134003146/1366b0b0-27c1-4a16-9d5d-03e74416f54d)
