@@ -126,6 +126,7 @@ while True:
         print("")
         number2 = input("Please enter the number: ")
         print("")
+
     # start server:
     elif number == "2":
         custom_route_create = input("Enter the name of the server folder (Just enter the name): ")
@@ -134,20 +135,19 @@ while True:
 
         if not os.path.exists(custom_route_create):
             print("This folder does not exist.")
-            continue  # Continuar con el bucle principal en lugar de salir
+            continue
 
-        found_jar = False  # Variable para verificar si se encontró un archivo .jar
+        found_jar = False
 
         for filejar in os.listdir(custom_route_create):
             if filejar.endswith(".jar"):
                 found_jar = True
                 route_folder2 = os.path.join(custom_route_create, filejar)
                 print(f"Found .jar file: {filejar}")
-                break  # Salir del bucle después de encontrar el archivo .jar
-
+                break
         if not found_jar:
             print("Server .jar file could not be found")
-            continue  # Continuar con el bucle principal en lugar de salir
+            continue
 
         while True:
             try:
@@ -156,23 +156,26 @@ while True:
 
                 if 1 <= custom_ram <= 64:
                     gb = str(1024 * custom_ram)
+
                     print(f"Running server with {gb} MB RAM")
+
+                    time.sleep(2)
 
                     try:
                         subprocess.run(f"java -Xmx{gb}M -Xms512M -jar {filejar} nogui", shell=True,
                                        cwd=custom_route_create)
                     except Exception as e:
                         print("Error executing the command:", e)
+
                     time.sleep(1)
+                    print("good luck:)")
                     exit()
                 else:
-                    # La cantidad de RAM no está dentro del rango válido
                     print("Please enter a number between 1 and 64.")
             except ValueError:
-                # La entrada no es un número válido
                 print("Specified input wasn't a number. Please enter a valid number.")
 
-    # software versions:
+    # Software Versions:
 
     # PAPER CLASS - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
     # paper - number3
