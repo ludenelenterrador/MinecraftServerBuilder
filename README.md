@@ -1,4 +1,4 @@
-# MinecraftServerBuilder
+# ServerBuilder
 
 If you like minecraft and you dont know how create a server it is your app :)
 
